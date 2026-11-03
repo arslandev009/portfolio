@@ -4,9 +4,9 @@ import ProjectCard from "@/components/ProjectCard";
 import { projects } from "@/lib/content";
 
 const tiers = [
-  { name: "Free", text: "Groq or Gemini free tier. Open to everyone, daily cap, sample data only." },
-  { name: "Premium (OpenAI)", text: "Access code on request, for serious evaluations. Limited messages." },
-  { name: "Bring your own key", text: "Use your own API key. It stays in your browser and is never stored." },
+  { name: "Sample data only", text: "The live demos run on bundled sample files. Free AI tiers may log what they receive, so please do not enter real or sensitive data." },
+  { name: "Visitor check and daily cap", text: "A Cloudflare Turnstile check (renewed every 30 minutes), a per-session rate limit and a shared daily budget keep the free demos usable for everyone." },
+  { name: "Free Gemini tier", text: "The demos call a free-tier Gemini model. The first request after a quiet period can take up to a minute, and when the daily budget is used up the demo says so: try again the next day." },
 ];
 
 export default function Demos() {
@@ -18,7 +18,7 @@ export default function Demos() {
       <main>
         <Section kicker="Live demos" title="LLM applications">
           <p className="mb-8 max-w-2xl text-zinc-400">
-            Each demo is built around one business problem. Pick a model option, try it with the sample data and judge the
+            Each demo is built around one business problem. Try it with the sample data and judge the
             output yourself. Please don&apos;t enter sensitive data.
           </p>
           <div className="mb-10 grid gap-4 sm:grid-cols-3">
@@ -38,7 +38,7 @@ export default function Demos() {
 
         <Section kicker="Live demos" title="Machine learning & MLOps">
           <p className="mb-8 max-w-2xl text-zinc-400">
-            Small trained models served live, with the experiment tracking and monitoring behind them. Source and write-ups
+            Trained models with the experiment tracking and monitoring behind them, added here as each one ships. Source and write-ups
             are on GitHub.
           </p>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
