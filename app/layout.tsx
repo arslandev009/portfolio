@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import WakeDemoApi from "@/components/WakeDemoApi";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -17,6 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${inter.className} bg-[#0a0a0b] text-zinc-200 antialiased`}>
         {children}
         <WhatsAppButton />
+        <WakeDemoApi />
       </body>
     </html>
   );
