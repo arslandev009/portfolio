@@ -64,10 +64,11 @@ export const projects: Project[] = [
     flow: ["Sources", "Enrich", "Score + evidence", "Hand-labelled eval"],
     problem: "Lead lists are mostly guesses. An internal pipeline finds businesses, crawls their sites, and scores them with a written reason for every point, then measures the rules against hand-labelled samples. It handles real business data, so it stays private; the demo is a video on fictional sample data.",
     stack: ["Python", "SQLite", "Serper API", "Rule-based scoring", "Hand-labelled eval"] },
-  { id: "a5", title: "AI Voice Receptionist", kind: "cloud", status: "planned", hue: "rose",
-    flow: ["Call", "Voice agent", "Calendar", "Confirmation"],
-    problem: "After-hours calls go unanswered. A voice agent answers, qualifies and books appointments.",
-    stack: ["VAPI", "n8n", "Webhooks"] },
+  { id: "a5", title: "AI Voice Receptionist", kind: "cloud", status: "built", hue: "rose",
+    repoUrl: "https://github.com/arslandev009/a5-voice-receptionist",
+    flow: ["Call", "Voice agent", "n8n tools", "Slot table", "ntfy confirmation"],
+    problem: "After-hours calls go unanswered. A voice agent answers, checks free slots and books an appointment, while plain n8n code validates the input and refuses double bookings, and a confirmation goes to a demo channel.",
+    stack: ["VAPI", "n8n", "Webhooks", "Shared-secret auth", "Smoke tests", "Real test calls"] },
 
   // ---------- Local & fine-tuned LLMs ----------
   { id: "b1", title: "Prompting vs Hybrid vs Fine-tuning", kind: "local", status: "in-progress", hue: "violet",
